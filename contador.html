@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Counter</title>
+        <script>
+            
+            // Espera a que se cargue la página
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Inicializa la variable en 0
+                let counter = 0;
+
+                // Si se hace clic en el botón de aumento, aumenta el contador y cambia el inner html
+                document.querySelector('#increase').onclick = () => {
+                    counter ++;
+                    document.querySelector('h1').innerHTML = counter;
+                }
+
+                // Si se hace clic en el botón de disminución, disminuye el contador y cambia el inner html
+                document.querySelector('#decrease').onclick = () => {
+                    counter --;
+                    document.querySelector('h1').innerHTML = counter;
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button id="increase">+</button>
+        <button id="decrease">-</button>
+    </body>
+</html>
